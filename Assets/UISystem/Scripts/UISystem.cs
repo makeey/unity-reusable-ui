@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Makeey.UI
@@ -81,6 +82,16 @@ namespace Makeey.UI
             }
 
             faderImage.CrossFadeAlpha(1f, faderOutDuration, false);
+        }
+
+        public void ExitFromApplication()
+        {
+            Application.Quit();
+        }
+
+        public void LoadScene(int sceneIndex)
+        {
+            SceneManager.LoadScene(sceneIndex);
         }
     }
 }
